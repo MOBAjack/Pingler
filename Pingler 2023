@@ -1,0 +1,19 @@
+from pythonping import ping
+import random
+
+word = ["cart", "bart", "tart" ,"part", "ert", "bert", "kert", "nert", "jo", "to", "no", "stop", "ping", "pong", "plang", "Plong", "er", "i", "hate", "e", "love"]
+i = 1
+while i < 30:
+    x = random.choice(word)
+    with open(x +".py", "w") as f:
+        f.write('from pythonping import ping\ny=1\nwhile y < 5:\n ping("142.250.186.78", verbose=True)\n print("Clone Fired!")\n y+=1')
+    i += 1
+    print("Done")
+
+while True:
+    x = random.choice(word)
+    try:
+        e = exec(open(x+".py").read())
+    except:
+        print("Retrying!")
+pass
